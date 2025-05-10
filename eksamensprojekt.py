@@ -101,7 +101,7 @@ class Block:
             damage /= 100
 
         if (damage > 1):
-            ticks = blockAmount - 1
+            ticks = blockAmount
             seconds = ticks / 20
             return seconds
 
@@ -408,7 +408,7 @@ def pickBlockAmount():
     print("\n\033[1;43m- SETTINGS -\033[0m")
 
     userInput = input("\033[1mPick amount of blocks: \033[0m")
-    if (numberCheck(userInput, 0 , 1000000) == True): 
+    if (numberCheck(userInput, 1 , 1000000) == True): 
         return (int) (userInput)
     else: return None
 
