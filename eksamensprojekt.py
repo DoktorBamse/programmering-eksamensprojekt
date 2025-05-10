@@ -296,6 +296,7 @@ def instantiateBlocks(toolTypes, blocks, bigData):
             else:
                 hardness = getHardness(name, bigData)
                 if (hardness != None and tool != "None" and "instant" not in tool):
+                    if "(" in type: name += type[type.find("(")-1:]
                     block = Block(name, tool, type, hardness)
                     blockList.append(block)
                 blockNumber += 1
