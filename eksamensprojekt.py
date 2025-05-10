@@ -101,7 +101,9 @@ class Block:
             damage /= 100
 
         if (damage > 1):
-            return 0
+            ticks = blockAmount - 1
+            seconds = ticks / 20
+            return seconds
 
         ticks = math.ceil(1 / damage) * blockAmount + ((blockAmount - 1) * 6)
         seconds = ticks / 20
